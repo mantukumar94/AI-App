@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$apiKey = "AIzaSyA8iSRmKIoTlIW3Lv952h_yTWQdYFIoruY";
+$apiKey = "";
 $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $apiKey;
 
 if (!isset($_SESSION['chat'])) {
@@ -68,3 +68,4 @@ if (!empty($data['message'])) {
     echo json_encode(["reply" => $reply]);
     exit;
 }
+
